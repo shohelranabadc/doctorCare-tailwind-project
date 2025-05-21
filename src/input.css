@@ -2,5 +2,14 @@
 
 
 @theme {
+    /* colors */
     --color-primary: #00856F;
+    --color-green-light: #DCE9E2;
+    --color-green-light-02: #F7F9F9;
+    --color-brand-beige: #FFFAF1;
+    --color-brand-green-hover: #00453A;
+
+    /* fonts */
+    --font-sans: "DM Sans", "sans-serif";
+
 }
