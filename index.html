@@ -16,21 +16,21 @@
   <!-- remix icon cdn -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <link href="./output.css" rel="stylesheet" />
+  <link href="./src/output.css" rel="stylesheet" />
 </head>
 
 <body class="bg-green-light-02 overflow-x-hidden">
 
   <!-- Header Section start here -->
-   <header>
-      <nav class="container mx-auto max-w-screen-xl">
+   <header id="header" class="bg-[#DCE9E2] text-primary fixed top-0 right-0 left-0 w-full z-50">
+      <nav class="container mx-auto max-w-screen-xl flex justify-between items-center p-4">
         <!-- Logo -->
         <div class="text-xl font-bold">
           <a href="/" class="text-black">Doctor<span class="text-primary">Care</span></a>
         </div>
 
         <!-- Menu Items -->
-        <ul>
+        <ul class="hidden md:flex space-x-8 ">
           <li>
             <a href="#home" class="hover:text-primary">Início</a>
           </li>
@@ -46,9 +46,18 @@
         </ul>
 
         <!-- call to action Button -->
-         <div>
-            <a href="#contact">Agendar consulta</a>
+         <div class="hidden md:block">
+            <a id="contact-btn" href="#contact" class="md:w-56 text-primary hover:text-white border border-primary px-6 py-2.5 
+            rounded-full hover:bg-primary transition-all duration-200 md:flex items-center justify-center">Agendar consulta</a>
          </div>
+
+         <!-- mobile nav bar -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="navbar-burger flex items-center p-3">
+              <img src="./src/assets/images/menu-icon.svg" alt="menu icon" class="block h-4 w-4 fill-current">
+               
+            </button>
+          </div>
       </nav>
    </header>
   <!-- Header Section end here -->
