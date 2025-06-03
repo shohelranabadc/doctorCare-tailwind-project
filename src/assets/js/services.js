@@ -39,7 +39,7 @@ function makeCard (service) {
     <div class="bg-white shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer 
     rounded-lg overflow-hidden">
        <div class="p-6 text-left">
-            <img src="./src/assets/images/service-icon.png" alt="service icon" class="object-center"> 
+            <img src="./src/assets/images/service-icon.png" alt="service icon" class=""> 
             <h3 class="text-2xl font-bold my-4"> ${service.title} </h3>
             <p class="text-gray-700 mb-4"> ${service.description}</p>
        </div> 
