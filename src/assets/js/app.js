@@ -8,9 +8,29 @@ const close = document.querySelectorAll('.navbar-close');
 const backdrop = document.querySelectorAll('.navbar-backdrop');
 const mobileMenuLink = document.querySelectorAll('#mobile-menu a[href^="#"');
 
-console.log(sections.length)
 
-window.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', ()=>{
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
 
-    console.log('--- Scroll Position:', window.scrollY + 50);
+function setActiveLink (sections, navLinks) {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    if (navLinks[index]) {
+        navLinks[index].classList.add('active')
+    }
+}
+
+
+function handleScroll() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    setActiveLink(sections, navLinks);
+}
+
 });
